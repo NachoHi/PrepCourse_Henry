@@ -4,9 +4,22 @@ function sort(sortBy, list) {
    // list: un arreglo de objetos.
    // La función deberá devolver la lista de objetos ordenada de forma DESCENDIENTE
    // a partir de la letra recibida. Por ejemplo:
-   // recibes --> ("a", [{ a: 1, b: 3 }, { a: 3, b: 2 }, { a: 2, b: 40 }])
+   // recibes --> ("a", [{ a: 1, b: 3 }, a{ : 3, b: 2 }, { a: 2, b: 40 }])
    // retorna --> [{ a: 3, b: 2 }, { a: 2, b: 40 }, { a: 1, b: 3 }]
    // Tu código:
+
+
+   for (let i = 0; i < list.length - 1; i++) {
+      for (let j = 0; j < list.length - 1 - i; j++) {
+         if (list[j][sortBy] < list[j + 1][sortBy]) {
+            var aux = list[j];
+            list[j] = list[j + 1];
+            list[j + 1] = aux;
+         }
+      }
+   }
+   
+   return list;
 }
 
 module.exports = sort;
