@@ -13,7 +13,7 @@ test('palabras con diferente longitud', () => {
 });
 
 test('palabras con diferente cantidad de letras iguales', () => {
-   expect(esAnagrama('hola', 'holb')).toBe(false);
+   expect(esAnagrama('hola', 'holac')).toBe(false);
 });
 
 test('palabras con espacios', () => {
